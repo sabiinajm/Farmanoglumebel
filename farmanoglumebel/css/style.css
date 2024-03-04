@@ -1,0 +1,589 @@
+:root{
+    --primary-color: rgb(104, 13, 13);
+    --secondary-color: #563737;
+}
+.pr-color{
+    color: var(--primary-color);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+
+    padding: 0;
+    box-sizing: border-box;
+   
+    scroll-behavior: smooth;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+  background: #eee;
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+    
+    text-decoration: none;
+}
+p {
+    margin: 0.75rem 0;
+}
+#navbar{
+  
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    background: rgb(21, 20, 20);
+    z-index: 10000;
+    padding: 1.5rem;
+
+}
+.logo{
+    background: url(/img/logo/34.png) no-repeat center center/cover;
+    height: 60px;
+    width: 50px;
+
+}
+#navbar ul{
+
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+}
+#navbar ul li a {
+    color: #fff;
+    padding: 1rem;
+   
+
+
+}
+#navbar ul li{
+    position: relative;
+    display: inline-block;
+    
+}
+
+#navbar ul li .current::after,
+#navbar ul li .current:hover::after{
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: var(--primary-color);
+    bottom: -15px;
+    position: absolute;
+    left: 0;
+    
+}
+#navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: var(--primary-color);
+    bottom: -15px;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+    
+
+}
+#navbar ul li:hover::after{
+    width: 100%;
+}
+.swiper{
+    position: relative;
+}
+.content{
+    width: 100%;
+    z-index: 10000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+
+}
+
+.content h1{
+    margin-top: 80px;
+    font-size: 2.5rem;
+   
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+#navbar{
+    font-size: 1.2rem;
+}
+.btn{
+    z-index: 1;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 30px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid var(--primary-color);
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #7b3a3a;
+   transition: all  0.3s;
+}
+.our-cont{
+    background: rgb(255, 255, 255);
+}
+
+
+.arrow{
+    position: absolute;
+    top: 40%;
+   background: transparent;
+   color: #999595;
+   padding: 2rem;
+   font-size: 2.5rem;
+   border: none;
+}
+.arrow:hover{
+    cursor: pointer;
+    color: #683f3f;
+    transition: all 1.2s;
+}
+.arrow-left{
+    left: -100px;
+
+}
+.arrow-right{
+    right: -100px;
+}
+
+.showcase{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+
+}
+#our{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 4.2rem;
+}
+#our h1{
+    font-size: 2.4rem ;
+    color: var(--primary-color);
+    padding-bottom: 1.2rem;
+}
+.header h1{
+    font-size: 2.4rem;
+    text-align: center;
+    padding: 4rem;
+}
+.boxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.3rem;
+    color: #fff;
+    
+}
+.boxes a{
+    color: #fff;
+}
+
+
+.fronts{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/img/kitchen/handl.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 2rem;
+    padding: 2.8rem;  
+}
+.fabrics{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/img/pexels-pixabay-259756.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 2rem;
+    padding: 2.9rem;
+}
+.handles{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/img/hhh.jpg);
+    margin: 0 2rem;
+    padding: 2.7rem;
+    background-size: cover;
+    background-position: center;
+
+}
+.about-container{
+    /* background: #657169; */
+    background: var(--secondary-color);
+    height: 450px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.outline{
+    border: #fff 2px solid;
+    position: absolute;
+    top: 40px;
+    height: 50vh;
+    width: 90vw;
+    
+}
+.outline-2{
+    border: #fff 2px solid;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+ height: 50vh;
+    width: 90vw;
+     
+}
+.about-box{
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.box-cont{
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+}
+.box-cont h2{
+    font-size: 2.4rem;
+}
+.fronts:hover{
+    transition: all 1s ease-in;
+    cursor: pointer;
+    background-image: linear-gradient(rgba(121, 39, 39, 0.6), rgba(0,0,0,0.5)), url(/img/kitchen/handl.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 2.5rem;
+    padding: 1.2 3rem;
+    color: #f8dddd;
+   
+}
+.fabrics:hover{
+    background-image: linear-gradient(rgba(121, 39, 39, 0.6), rgba(0,0,0,0.5)), url(/img/pexels-pixabay-259756.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 2.5rem;
+    padding: 1.2 3rem;
+    transition: all 1s ease-in;
+    color: #f8dddd;
+    cursor: pointer;
+}
+.handles:hover{
+    background-image: linear-gradient(rgba(121, 39, 39, 0.6), rgba(0,0,0,0.5)), url(/img/hhh.jpg);
+    margin: 0 2.5rem;
+    padding: 1.2 3rem;
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease-in;
+    color: #f8dddd;
+    cursor: pointer;
+}
+#end{
+    background: #141212;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+
+}
+#end li{
+    list-style: none;
+    text-decoration: none;
+    padding: 0.3rem;
+
+}
+#end li a{
+    color: white;
+}
+#end li a:hover{
+    color: var(--secondary-color);
+}
+.end-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer{
+    background: var(--primary-color);
+    padding: 0.2rem;
+    text-align: center;
+
+}
+
+#navbar .menu-hamburger{
+    display: none;
+   position: absolute;
+    top: 35px;
+    right: 50px;
+    width: 35px;
+    font-size: 25px;
+    color: white;
+}
+
+  @media (max-width: 1000px) {
+ 
+ 
+    #navbar ul li{
+       font-size: 1.5rem;
+    }
+    #navbar .menu-hamburger{
+        display: block;
+    }
+    .nav-links{
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: #5711117b;
+        backdrop-filter: blur(7px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    .nav-links.mobile-menu{
+        margin-left: 0;
+    }
+   
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links ul li{
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+ #navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+ 
+  }
+ 
+@media only screen and (max-width:1320px){
+   
+    #navbar {
+
+        padding: 1.2rem;
+    }
+ 
+}
+@media only screen and (max-width:1100px){
+   
+    #navbar {
+        padding: 1.1rem;
+    }
+
+
+}
+@media only screen and (max-width:900px){
+     #navbar ul li a {
+        padding: 0;
+    }
+
+ #navbar{
+    padding: 1.3rem;
+ }
+.btn{
+    display: none;
+}
+.about-container{
+    display: none;
+}
+
+
+
+
+#navbar img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 2rem;
+}
+.content{
+    position: absolute;
+    top: 40%;
+    padding: 40px;
+}
+.content h1{
+    font-size: 50px;
+}
+
+#our{
+    padding: 0;
+}
+#our h1{
+    display: none;
+}
+
+.boxes{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    
+
+}
+.boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.3rem;
+    color: #fff;
+    background: #141212;
+    
+}
+
+.fronts:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/img/kitchen/handl.jpg);
+        background-size: cover;
+        background-position: center;
+        margin: 0 2rem;
+        padding: 2.5rem;
+        color:#fff;
+    
+}
+
+.fabrics:hover{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/img/pexels-pixabay-259756.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 2rem;
+    padding: 2.5rem;
+    color:#fff;
+   
+}
+.handles:hover{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/img/hhh.jpg);
+    margin: 0 2rem;
+    padding: 2.5rem;
+    background-size: cover;
+    background-position: center;
+    color:#fff;
+
+}
+
+#end ul li{
+    display: none;
+}
+#end{
+
+    background: var(--secondary-color);
+    display: flex;
+    
+    justify-content: center;
+}
+
+.header h1{
+    font-size: 2.4rem;
+    text-align: center;
+    padding: 4rem;
+}
+
+.box-bg{
+    background: #141212;
+   padding: 2rem;
+}
+
+#navbar .menu-hamburger{
+    display: block;
+  }
+
+.nav-bar{
+   
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(33, 27, 27, 0.5);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%;
+    transition: all 0.5s ease;
+}
+
+.nav-bar ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-bar ul li{
+    margin: 25px 0;
+    font-size: 1.2em;
+}
+.content h1{
+    font-size: 40px;
+    padding: 20px;
+}
+
+}
+/* swiper */
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    filter: brightness(70%);
+  }
+.swiper-button{
+    padding: 2rem;
+    color: rgb(229, 229, 229);
+    font-weight: bolder;
+}
+/* kitchen swiper */
+.swiper {
+    width: 100%;
+
+  
+  }
+.swiper-kitchen{
+    padding-bottom: 50px;
+}
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 600px;
+    height: 600px;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+  .swiper-pagination-bullet-active{
+      background-color: rgb(133, 24, 24);
+  }
+  .heading{
+      text-align: center;
+      padding: 2rem;
+      font-size: 1.8rem;
+  }
